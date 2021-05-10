@@ -87,6 +87,8 @@ A SQL Join statement is used to combine data or rows from two or more tables bas
 >* LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
 >* RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
 >* FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+
 ![INNER join images](https://www.w3schools.com/sql/img_innerjoin.gif)
 ![LEFT join](https://www.w3schools.com/sql/img_leftjoin.gif)
 ![Rigth Join](https://www.w3schools.com/sql/img_rightjoin.gif)
