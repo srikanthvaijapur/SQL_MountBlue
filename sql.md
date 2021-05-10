@@ -101,3 +101,4 @@ A SQL Join statement is used to combine data or rows from two or more tables bas
 [1.SQL Tutorialspoint](https://www.tutorialspoint.com/sql/index.htm)
 
 [2.Artical in geekforgeeks](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/)
+`
