@@ -59,21 +59,67 @@ groups based on their nature:</p>
 * Aggregate functions take multiple rows from the table and return a value according to the query.
 * All the aggregate functions are used in Select statement.
 
+
 Syntax - 
-    
-    SELECT <FUNCTION NAME> (<PARAMETER>) FROM <TABLE NAME>
-> **AVG Function**
+```sql    
+SELECT <FUNCTION NAME> (<PARAMETER>) FROM <TABLE NAME>
+```
+
+**AVG Function :**
 This function returns the average value of the numeric column that is supplied as a parameter.
 
-Example: Write a query to select average salary from employee table.
+><B>Example:</B> Write a query to select average salary from employee table.
 
-```Select AVG(salary) from Employee```
-> **COUNT Function**The count function returns the number of rows in the result. It does not count the null values.
+```sql
+Select AVG(salary) from Employee
+```
 
-Example: Write a query to return number of rows where salary > 20000.
-```Select COUNT(*) from Employee where Salary > 20000;```
+**COUNT Function :**   The count function returns the number of rows in the result. It does not count the null values.
 
->#### Some of the Aggrigation functions are "<u>MAX,SUM,VARIANCE </u> etc..
+><B>Example:</B> Write a query to return number of rows where salary > 20000.
+
+```sql
+Select COUNT(*) from Employee where Salary > 20000;
+```
+
+#### Types:
+* COUNT(*): Counts all the number of rows of the table including null.
+
+* COUNT( COLUMN_NAME): count number of non-null values in column.
+
+* COUNT( DISTINCT COLUMN_NAME): count number of distinct values in a column.
+
+**MAX FUNCTION :**
+The MAX function is used to find maximum value in the column that is supplied as a parameter. It can be used on any type of data.
+
+><B>Example − </B> Write a query to find the maximum salary in employee table.
+```sql
+Select MAX(salary) from Employee
+```
+**SUM Function :**
+This function sums up the values in the column supplied as a parameter.
+
+><B>Example:</B> Write a query to get the total salary of employees.
+```sql
+Select SUM(salary) from Employee
+```
+
+**STDDEV Function:**
+The STDDEV function is used to find standard deviation of the column specified as argument.
+
+><B>Example − </B> Write a query to find standard deviation of salary in Employee table.
+```sql
+Select STDDEV(salary) from Employee
+```
+**VARIANCE Function:**
+The VARIANCE Function is used to find variance of the column specified as argument.
+
+><B>Example −</B>
+```sql
+
+Select VARIANCE(salary) from Employee
+```
+
 
 
 
@@ -82,19 +128,79 @@ Example: Write a query to return number of rows where salary > 20000.
 A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins are:
 </p>
 
+  * INNER JOIN
+  * LEFT JOIN
+  * RIGHT JOIN
+  * FULL JOIN
+  
+  consider two tables below:
 
->* INNER JOIN: Returns records that have matching values in both tables
->* LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
->* RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
->* FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+#### Students:
+            
+![tables](https://media.geeksforgeeks.org/wp-content/cdn-uploads/table1-3.png)
 
+#### StudentCourse:
+
+![tables](https://media.geeksforgeeks.org/wp-content/uploads/table5.png)
+
+<B>1. INNER JOIN:</B>The INNER JOIN keyword selects all rows from both the tables as long as the condition satisfies. This keyword will create the result-set by combining all rows from both the tables where the condition satisfies i.e value of the common field will be same.
 
 ![INNER join images](https://www.w3schools.com/sql/img_innerjoin.gif)
+
+
+##### Syntax:
+
+```sql
+SELECT StudentCourse.COURSE_ID, Student.NAME, Student.AGE FROM Student
+INNER JOIN StudentCourse
+ON Student.ROLL_NO = StudentCourse.ROLL_NO;
+```
+
+#### output:
+![output](https://media.geeksforgeeks.org/wp-content/uploads/table22.png)
+
+<B>2.LEFT JOIN:</B>This join returns all the rows of the table on the left side of the join and matching rows for the table on the right side of join. The rows for which there is no matching row on right side, the result-set will contain null. LEFT JOIN is also known as LEFT OUTER JOIN.
+
 ![LEFT join](https://www.w3schools.com/sql/img_leftjoin.gif)
+
+#### Syntax:
+```sql
+SELECT Student.NAME,StudentCourse.COURSE_ID 
+FROM Student
+LEFT JOIN StudentCourse 
+ON StudentCourse.ROLL_NO = Student.ROLL_NO;
+```
+#### output:
+![output](https://media.geeksforgeeks.org/wp-content/uploads/table31.png)
+
+<B>3.RIGHT JOIN:</B> RIGHT JOIN is similar to LEFT JOIN. This join returns all the rows of the table on the right side of the join and matching rows for the table on the left side of join. The rows for which there is no matching row on left side, the result-set will contain null. RIGHT JOIN is also known as RIGHT OUTER JOIN.
+
 ![Rigth Join](https://www.w3schools.com/sql/img_rightjoin.gif)
+
+#### Syntax:
+```sql
+SELECT Student.NAME,StudentCourse.COURSE_ID 
+FROM Student
+RIGHT JOIN StudentCourse 
+ON StudentCourse.ROLL_NO = Student.ROLL_NO;
+```
+#### Output:
+![Right Table](https://media.geeksforgeeks.org/wp-content/uploads/table6.png)
+
+<B>4. FULL JOIN:</B> FULL JOIN creates the result-set by combining result of both LEFT JOIN and RIGHT JOIN. The result-set will contain all the rows from both the tables. The rows for which there is no matching, the result-set will contain NULL values.
+
+
 ![FULL OUTER join](https://www.w3schools.com/sql/img_fulljoin.gif)
 
-
+#### Syntax:
+```sql
+SELECT Student.NAME,StudentCourse.COURSE_ID 
+FROM Student
+FULL JOIN StudentCourse 
+ON StudentCourse.ROLL_NO = Student.ROLL_NO;
+```
+#### Output:
+![output](https://media.geeksforgeeks.org/wp-content/uploads/table7.png)
 
 
 
@@ -103,4 +209,5 @@ A SQL Join statement is used to combine data or rows from two or more tables bas
 [1.SQL Tutorialspoint](https://www.tutorialspoint.com/sql/index.htm)
 
 [2.Artical in geekforgeeks](https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/)
-`
+
+
