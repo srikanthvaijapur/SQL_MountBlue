@@ -34,7 +34,8 @@ groups based on their nature:</p>
 
 
 
->#### DDL - Data Defination Language
+#### DDL - Data Defination Language
+
 
 | Command |Description|
 |----------|----------|
@@ -42,7 +43,9 @@ groups based on their nature:</p>
 | ALTER |Modifies an existing database object, such as a table.|
 | DROP |Deletes an entire table, a view of a table, or other objects in the database.|
 
->#### DML - Data Manipulation LANGUAGE
+
+#### DML - Data Manipulation LANGUAGE
+
 
 | Command | Description |
 |--------|-------------|
@@ -51,12 +54,15 @@ groups based on their nature:</p>
 |UPDATE|Modifies the Data|
 |Delete|Delete records|
 
->#### DCL - Data Control Language
+
+#### DCL - Data Control Language
+
 
 |Command | Description |
 |--------|-------------|
 |GRANT|Gives a privilege to user|
 |REVOKE|Takes back privilege granted for the user
+
 
 ## SQL AGGREGATE FUNCTIONS
 
