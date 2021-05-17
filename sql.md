@@ -55,7 +55,7 @@ groups based on their nature:</p>
 |GRANT|Gives a previliage to user|
 |REVOKE|Takes back privilage granted for user
 
-## SQL AGGREAGATE FUNCTIONS
+## SQL AGGREGATE FUNCTIONS
 * Aggregate functions take multiple rows from the table and return a value according to the query.
 * All the aggregate functions are used in Select statement.
 
