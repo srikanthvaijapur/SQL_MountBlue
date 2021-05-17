@@ -33,14 +33,17 @@ These commands can be classified into the following
 groups based on their nature:</p>
 
 
-|
+
 >#### DDL - Data Defination Language
+
 | Command |Description|
 |----------|----------|
 | CREATE|Creates a new table, a view of a table, or other objects in the database.|
 | ALTER |Modifies an existing database object, such as a table.|
 | DROP |Deletes an entire table, a view of a table, or other objects in the database.|
+
 >#### DML - Data Manipulation LANGUAGE
+
 | Command | Description |
 |--------|-------------|
 |SELECT |Retrieves certain records from one or more tables.|
