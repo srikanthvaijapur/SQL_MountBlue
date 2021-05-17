@@ -9,12 +9,11 @@ standard language, but there are many different versions of the SQL language.
 
 ### 1. What is SQL?
 <p>
-SQL is Structured Query Language, which is a computer language for storing, manipulating
-and retrieving data stored in a relational database.
+SQL is a Structured Query Language, which is a computer language for storing, manipulating, and retrieving data stored in a relational database.
 <br></br>
 SQL is the standard language for Relational Database System. All the Relational Database
 Management Systems (RDMS) like MySQL, MS Access, Oracle, Sybase, Informix, Postgres
-and SQL Server use SQL as their standard database language.
+and SQL Server uses SQL as their standard database language.
 <br></br>
 </p>
 
@@ -24,7 +23,7 @@ SQL is widely popular because it offers the following advantages:
 * Allows users to describe the data
 * Allows users to define the data in a database and manipulate that data.
 * Allows users to create and drop databases and tables
-* Allows users to set permissions on tables, procedures and views.
+* Allows users to set permissions on tables, procedures, and views.
 
 ### 3.SQL Commands 
 
@@ -38,9 +37,9 @@ groups based on their nature:</p>
 >#### DDL - Data Defination Language
 | Command |Description|
 |----------|----------|
-| CREATE|Creates a new table, a view of a table, or other object in the database.|
+| CREATE|Creates a new table, a view of a table, or other objects in the database.|
 | ALTER |Modifies an existing database object, such as a table.|
-| DROP |Deletes an entire table, a view of a table or other objects in the database.|
+| DROP |Deletes an entire table, a view of a table, or other objects in the database.|
 >#### DML - Data Manipulation LANGUAGE
 | Command | Description |
 |--------|-------------|
@@ -52,12 +51,12 @@ groups based on their nature:</p>
 >#### DCL - Data Control Language
 |Command | Description |
 |--------|-------------|
-|GRANT|Gives a previliage to user|
-|REVOKE|Takes back privilage granted for user
+|GRANT|Gives a privilege to user|
+|REVOKE|Takes back privilege granted for the user
 
 ## SQL AGGREGATE FUNCTIONS
 * Aggregate functions take multiple rows from the table and return a value according to the query.
-* All the aggregate functions are used in Select statement.
+* All the aggregate functions are used in the Select statement.
 
 
 Syntax - 
@@ -65,57 +64,57 @@ Syntax -
 SELECT <FUNCTION NAME> (<PARAMETER>) FROM <TABLE NAME>
 ```
 
-**AVG Function :**
+**AVG Function:**
 This function returns the average value of the numeric column that is supplied as a parameter.
 
-><B>Example:</B> Write a query to select average salary from employee table.
+><B>Example:</B> Write a query to select the average salary from the employee table.
 
-```sql
+```SQL
 Select AVG(salary) from Employee
 ```
 
-**COUNT Function :**   The count function returns the number of rows in the result. It does not count the null values.
+**COUNT Function:**   The count function returns the number of rows in the result. It does not count the null values.
 
-><B>Example:</B> Write a query to return number of rows where salary > 20000.
+><B>Example:</B> Write a query to return the number of rows where salary > 20000.
 
-```sql
+```SQL
 Select COUNT(*) from Employee where Salary > 20000;
 ```
 
 #### Types:
 * COUNT(*): Counts all the number of rows of the table including null.
 
-* COUNT( COLUMN_NAME): count number of non-null values in column.
+* COUNT( COLUMN_NAME): count the number of non-null values in the column.
 
-* COUNT( DISTINCT COLUMN_NAME): count number of distinct values in a column.
+* COUNT( DISTINCT COLUMN_NAME): count the number of distinct values in a column.
 
-**MAX FUNCTION :**
-The MAX function is used to find maximum value in the column that is supplied as a parameter. It can be used on any type of data.
+**MAX FUNCTION:**
+The MAX function is used to find the maximum value in the column that is supplied as a parameter. It can be used on any type of data.
 
-><B>Example − </B> Write a query to find the maximum salary in employee table.
-```sql
+><B>Example − </B> Write a query to find the maximum salary in the employee table.
+```SQL
 Select MAX(salary) from Employee
 ```
-**SUM Function :**
+**SUM Function:**
 This function sums up the values in the column supplied as a parameter.
 
 ><B>Example:</B> Write a query to get the total salary of employees.
-```sql
+```SQL
 Select SUM(salary) from Employee
 ```
 
 **STDDEV Function:**
-The STDDEV function is used to find standard deviation of the column specified as argument.
+The STDDEV function is used to find the standard deviation of the column specified as an argument.
 
-><B>Example − </B> Write a query to find standard deviation of salary in Employee table.
-```sql
+><B>Example − </B> Write a query to find the standard deviation of salary in the Employee table.
+```SQL
 Select STDDEV(salary) from Employee
 ```
 **VARIANCE Function:**
-The VARIANCE Function is used to find variance of the column specified as argument.
+The VARIANCE Function is used to find the variance of the column specified as an argument.
 
 ><B>Example −</B>
-```sql
+```SQL
 
 Select VARIANCE(salary) from Employee
 ```
@@ -143,7 +142,7 @@ A SQL Join statement is used to combine data or rows from two or more tables bas
 
 ![tables](https://media.geeksforgeeks.org/wp-content/uploads/table5.png)
 
-<B>1. INNER JOIN:</B>The INNER JOIN keyword selects all rows from both the tables as long as the condition satisfies. This keyword will create the result-set by combining all rows from both the tables where the condition satisfies i.e value of the common field will be same.
+<B>1. INNER JOIN:</B>The INNER JOIN keyword selects all rows from both the tables as long as the condition satisfies. This keyword will create the result-set by combining all rows from both the tables where the condition satisfies i.e value of the common field will be the same.
 
 ![INNER join images](https://www.w3schools.com/sql/img_innerjoin.gif)
 
@@ -159,7 +158,7 @@ ON Student.ROLL_NO = StudentCourse.ROLL_NO;
 #### output:
 ![output](https://media.geeksforgeeks.org/wp-content/uploads/table22.png)
 
-<B>2.LEFT JOIN:</B>This join returns all the rows of the table on the left side of the join and matching rows for the table on the right side of join. The rows for which there is no matching row on right side, the result-set will contain null. LEFT JOIN is also known as LEFT OUTER JOIN.
+<B>2. LEFT JOIN:</B>This join returns all the rows of the table on the left side of the join and matching rows for the table on the right side of the join. The rows for which there is no matching row on the right side, the result-set will contain null. LEFT JOIN is also known as LEFT OUTER JOIN.
 
 ![LEFT join](https://www.w3schools.com/sql/img_leftjoin.gif)
 
@@ -173,7 +172,7 @@ ON StudentCourse.ROLL_NO = Student.ROLL_NO;
 #### output:
 ![output](https://media.geeksforgeeks.org/wp-content/uploads/table31.png)
 
-<B>3.RIGHT JOIN:</B> RIGHT JOIN is similar to LEFT JOIN. This join returns all the rows of the table on the right side of the join and matching rows for the table on the left side of join. The rows for which there is no matching row on left side, the result-set will contain null. RIGHT JOIN is also known as RIGHT OUTER JOIN.
+<B>3. RIGHT JOIN:</B> RIGHT JOIN is similar to LEFT JOIN. This join returns all the rows of the table on the right side of the join and matching rows for the table on the left side of the join. The rows for which there is no matching row on the left side, the result-set will contain null. RIGHT JOIN is also known as RIGHT OUTER JOIN.
 
 ![Rigth Join](https://www.w3schools.com/sql/img_rightjoin.gif)
 
@@ -187,7 +186,7 @@ ON StudentCourse.ROLL_NO = Student.ROLL_NO;
 #### Output:
 ![Right Table](https://media.geeksforgeeks.org/wp-content/uploads/table6.png)
 
-<B>4. FULL JOIN:</B> FULL JOIN creates the result-set by combining result of both LEFT JOIN and RIGHT JOIN. The result-set will contain all the rows from both the tables. The rows for which there is no matching, the result-set will contain NULL values.
+<B>4. FULL JOIN:</B> FULL JOIN creates the result-set by combining the result of both LEFT JOIN and RIGHT JOIN. The result-set will contain all the rows from both tables. The rows for which there is no matching, the result-set will contain NULL values.
 
 
 ![FULL OUTER join](https://www.w3schools.com/sql/img_fulljoin.gif)
