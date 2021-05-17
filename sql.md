@@ -49,23 +49,25 @@ groups based on their nature:</p>
 |Delete|Delete records|
 
 >#### DCL - Data Control Language
+
 |Command | Description |
 |--------|-------------|
 |GRANT|Gives a privilege to user|
 |REVOKE|Takes back privilege granted for the user
 
 ## SQL AGGREGATE FUNCTIONS
+
 * Aggregate functions take multiple rows from the table and return a value according to the query.
 * All the aggregate functions are used in the Select statement.
 
 
 Syntax - 
+
 ```sql    
 SELECT <FUNCTION NAME> (<PARAMETER>) FROM <TABLE NAME>
 ```
 
-**AVG Function:**
-This function returns the average value of the numeric column that is supplied as a parameter.
+**AVG Function:**   This function returns the average value of the numeric column that is supplied as a parameter.
 
 ><B>Example:</B> Write a query to select the average salary from the employee table.
 
@@ -82,6 +84,7 @@ Select COUNT(*) from Employee where Salary > 20000;
 ```
 
 #### Types:
+
 * COUNT(*): Counts all the number of rows of the table including null.
 
 * COUNT( COLUMN_NAME): count the number of non-null values in the column.
@@ -89,6 +92,7 @@ Select COUNT(*) from Employee where Salary > 20000;
 * COUNT( DISTINCT COLUMN_NAME): count the number of distinct values in a column.
 
 **MAX FUNCTION:**
+
 The MAX function is used to find the maximum value in the column that is supplied as a parameter. It can be used on any type of data.
 
 ><B>Example − </B> Write a query to find the maximum salary in the employee table.
@@ -96,6 +100,7 @@ The MAX function is used to find the maximum value in the column that is supplie
 Select MAX(salary) from Employee
 ```
 **SUM Function:**
+
 This function sums up the values in the column supplied as a parameter.
 
 ><B>Example:</B> Write a query to get the total salary of employees.
@@ -104,6 +109,7 @@ Select SUM(salary) from Employee
 ```
 
 **STDDEV Function:**
+
 The STDDEV function is used to find the standard deviation of the column specified as an argument.
 
 ><B>Example − </B> Write a query to find the standard deviation of salary in the Employee table.
@@ -111,6 +117,7 @@ The STDDEV function is used to find the standard deviation of the column specifi
 Select STDDEV(salary) from Employee
 ```
 **VARIANCE Function:**
+
 The VARIANCE Function is used to find the variance of the column specified as an argument.
 
 ><B>Example −</B>
@@ -123,6 +130,7 @@ Select VARIANCE(salary) from Employee
 
 
 ## SQL JOINS
+
 <p>
 A SQL Join statement is used to combine data or rows from two or more tables based on a common field between them. Different types of Joins are:
 </p>
